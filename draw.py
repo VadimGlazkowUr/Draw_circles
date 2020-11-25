@@ -13,7 +13,6 @@ class MyWidget(QMainWindow):
         self.pushButton.clicked.connect(self.count)
         self.draw_circles = False
 
-
     def count(self):
         self.pushButton.close()
         self.draw_circles = True
@@ -35,9 +34,6 @@ class MyWidget(QMainWindow):
             x = randint(diameter, 660 - diameter)
             y = randint(diameter, 325 - diameter)
             qp.drawEllipse(x, y, diameter, diameter)
-            print(x, y, diameter)
-
-
 
     def except_hook(cls, exception, traceback):
             sys.__excepthook__(cls, exception, traceback)
